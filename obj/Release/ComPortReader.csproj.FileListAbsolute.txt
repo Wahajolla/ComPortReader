@@ -1,0 +1,10 @@
+C:\Users\Wahajolla\source\repos\ComPortReader\bin\Release\ComPortReader.exe.config
+C:\Users\Wahajolla\source\repos\ComPortReader\bin\Release\ComPortReader.exe
+C:\Users\Wahajolla\source\repos\ComPortReader\bin\Release\ComPortReader.pdb
+C:\Users\Wahajolla\source\repos\ComPortReader\obj\Release\ComPortReader.csprojAssemblyReference.cache
+C:\Users\Wahajolla\source\repos\ComPortReader\obj\Release\ComPortReader.Form1.resources
+C:\Users\Wahajolla\source\repos\ComPortReader\obj\Release\ComPortReader.Properties.Resources.resources
+C:\Users\Wahajolla\source\repos\ComPortReader\obj\Release\ComPortReader.csproj.GenerateResource.cache
+C:\Users\Wahajolla\source\repos\ComPortReader\obj\Release\ComPortReader.csproj.CoreCompileInputs.cache
+C:\Users\Wahajolla\source\repos\ComPortReader\obj\Release\ComPortReader.exe
+C:\Users\Wahajolla\source\repos\ComPortReader\obj\Release\ComPortReader.pdb
