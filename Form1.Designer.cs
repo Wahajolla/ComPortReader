@@ -1,6 +1,6 @@
 ﻿namespace ComPortReader
 {
-    partial class Form1
+    partial class Recorder
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -46,21 +46,19 @@
             this.toolStripMenuItem13 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem16 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem17 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem18 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem19 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem16 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem17 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem20 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem21 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem14 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem22 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem23 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem24 = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.StopRecord = new System.Windows.Forms.Button();
             количествоБитовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -120,151 +118,143 @@
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(110, 22);
             this.toolStripMenuItem2.Text = "300";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.SetRate);
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.OnSetRate);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.Size = new System.Drawing.Size(110, 22);
             this.toolStripMenuItem3.Text = "600";
-            this.toolStripMenuItem3.Click += new System.EventHandler(this.SetRate);
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.OnSetRate);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
             this.toolStripMenuItem4.Size = new System.Drawing.Size(110, 22);
             this.toolStripMenuItem4.Text = "1200";
-            this.toolStripMenuItem4.Click += new System.EventHandler(this.SetRate);
+            this.toolStripMenuItem4.Click += new System.EventHandler(this.OnSetRate);
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
             this.toolStripMenuItem5.Size = new System.Drawing.Size(110, 22);
             this.toolStripMenuItem5.Text = "2400";
-            this.toolStripMenuItem5.Click += new System.EventHandler(this.SetRate);
+            this.toolStripMenuItem5.Click += new System.EventHandler(this.OnSetRate);
             // 
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
             this.toolStripMenuItem6.Size = new System.Drawing.Size(110, 22);
             this.toolStripMenuItem6.Text = "4800";
-            this.toolStripMenuItem6.Click += new System.EventHandler(this.SetRate);
+            this.toolStripMenuItem6.Click += new System.EventHandler(this.OnSetRate);
             // 
             // toolStripMenuItem7
             // 
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
             this.toolStripMenuItem7.Size = new System.Drawing.Size(110, 22);
             this.toolStripMenuItem7.Text = "9600";
-            this.toolStripMenuItem7.Click += new System.EventHandler(this.SetRate);
+            this.toolStripMenuItem7.Click += new System.EventHandler(this.OnSetRate);
             // 
             // toolStripMenuItem8
             // 
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
             this.toolStripMenuItem8.Size = new System.Drawing.Size(110, 22);
             this.toolStripMenuItem8.Text = "14400";
-            this.toolStripMenuItem8.Click += new System.EventHandler(this.SetRate);
+            this.toolStripMenuItem8.Click += new System.EventHandler(this.OnSetRate);
             // 
             // toolStripMenuItem9
             // 
             this.toolStripMenuItem9.Name = "toolStripMenuItem9";
             this.toolStripMenuItem9.Size = new System.Drawing.Size(110, 22);
             this.toolStripMenuItem9.Text = "19200";
-            this.toolStripMenuItem9.Click += new System.EventHandler(this.SetRate);
+            this.toolStripMenuItem9.Click += new System.EventHandler(this.OnSetRate);
             // 
             // toolStripMenuItem10
             // 
             this.toolStripMenuItem10.Name = "toolStripMenuItem10";
             this.toolStripMenuItem10.Size = new System.Drawing.Size(110, 22);
             this.toolStripMenuItem10.Text = "28800";
-            this.toolStripMenuItem10.Click += new System.EventHandler(this.SetRate);
+            this.toolStripMenuItem10.Click += new System.EventHandler(this.OnSetRate);
             // 
             // toolStripMenuItem11
             // 
             this.toolStripMenuItem11.Name = "toolStripMenuItem11";
             this.toolStripMenuItem11.Size = new System.Drawing.Size(110, 22);
             this.toolStripMenuItem11.Text = "38400";
-            this.toolStripMenuItem11.Click += new System.EventHandler(this.SetRate);
+            this.toolStripMenuItem11.Click += new System.EventHandler(this.OnSetRate);
             // 
             // toolStripMenuItem12
             // 
             this.toolStripMenuItem12.Name = "toolStripMenuItem12";
             this.toolStripMenuItem12.Size = new System.Drawing.Size(110, 22);
             this.toolStripMenuItem12.Text = "57600";
-            this.toolStripMenuItem12.Click += new System.EventHandler(this.SetRate);
+            this.toolStripMenuItem12.Click += new System.EventHandler(this.OnSetRate);
             // 
             // toolStripMenuItem13
             // 
             this.toolStripMenuItem13.Name = "toolStripMenuItem13";
             this.toolStripMenuItem13.Size = new System.Drawing.Size(110, 22);
             this.toolStripMenuItem13.Text = "115200";
-            this.toolStripMenuItem13.Click += new System.EventHandler(this.SetRate);
+            this.toolStripMenuItem13.Click += new System.EventHandler(this.OnSetRate);
             // 
             // toolStripTextBox1
             // 
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
-            this.toolStripTextBox1.TextChanged += new System.EventHandler(this.SetDataBit);
+            this.toolStripTextBox1.TextChanged += new System.EventHandler(this.OnSetDataBit);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem16,
-            this.toolStripMenuItem17,
             this.toolStripMenuItem18,
             this.toolStripMenuItem19,
-            this.toolStripMenuItem20,
-            this.toolStripMenuItem21});
+            this.toolStripMenuItem16,
+            this.toolStripMenuItem17,
+            this.toolStripMenuItem20});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(91, 23);
             this.toolStripMenuItem1.Text = "Бит четности";
-            // 
-            // toolStripMenuItem16
-            // 
-            this.toolStripMenuItem16.Name = "toolStripMenuItem16";
-            this.toolStripMenuItem16.Size = new System.Drawing.Size(155, 22);
-            this.toolStripMenuItem16.Text = "Четное";
-            this.toolStripMenuItem16.Click += new System.EventHandler(this.SetPar);
-            // 
-            // toolStripMenuItem17
-            // 
-            this.toolStripMenuItem17.Name = "toolStripMenuItem17";
-            this.toolStripMenuItem17.Size = new System.Drawing.Size(155, 22);
-            this.toolStripMenuItem17.Text = "Оставить бит 1";
-            this.toolStripMenuItem17.Click += new System.EventHandler(this.SetPar);
             // 
             // toolStripMenuItem18
             // 
             this.toolStripMenuItem18.Name = "toolStripMenuItem18";
             this.toolStripMenuItem18.Size = new System.Drawing.Size(155, 22);
             this.toolStripMenuItem18.Text = "Без контроля";
-            this.toolStripMenuItem18.Click += new System.EventHandler(this.SetPar);
+            this.toolStripMenuItem18.Click += new System.EventHandler(this.OnSetParityBit);
             // 
             // toolStripMenuItem19
             // 
             this.toolStripMenuItem19.Name = "toolStripMenuItem19";
             this.toolStripMenuItem19.Size = new System.Drawing.Size(155, 22);
             this.toolStripMenuItem19.Text = "Нечетное";
-            this.toolStripMenuItem19.Click += new System.EventHandler(this.SetPar);
+            this.toolStripMenuItem19.Click += new System.EventHandler(this.OnSetParityBit);
+            // 
+            // toolStripMenuItem16
+            // 
+            this.toolStripMenuItem16.Name = "toolStripMenuItem16";
+            this.toolStripMenuItem16.Size = new System.Drawing.Size(155, 22);
+            this.toolStripMenuItem16.Text = "Четное";
+            this.toolStripMenuItem16.Click += new System.EventHandler(this.OnSetParityBit);
+            // 
+            // toolStripMenuItem17
+            // 
+            this.toolStripMenuItem17.Name = "toolStripMenuItem17";
+            this.toolStripMenuItem17.Size = new System.Drawing.Size(155, 22);
+            this.toolStripMenuItem17.Text = "Оставить бит 1";
+            this.toolStripMenuItem17.Click += new System.EventHandler(this.OnSetParityBit);
             // 
             // toolStripMenuItem20
             // 
             this.toolStripMenuItem20.Name = "toolStripMenuItem20";
             this.toolStripMenuItem20.Size = new System.Drawing.Size(155, 22);
             this.toolStripMenuItem20.Text = "Бит четности 0";
-            this.toolStripMenuItem20.Click += new System.EventHandler(this.SetPar);
-            // 
-            // toolStripMenuItem21
-            // 
-            this.toolStripMenuItem21.Name = "toolStripMenuItem21";
-            this.toolStripMenuItem21.Size = new System.Drawing.Size(155, 22);
-            this.toolStripMenuItem21.Text = "5";
-            this.toolStripMenuItem21.Click += new System.EventHandler(this.SetPar);
+            this.toolStripMenuItem20.Click += new System.EventHandler(this.OnSetParityBit);
             // 
             // toolStripMenuItem14
             // 
             this.toolStripMenuItem14.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem22,
-            this.toolStripMenuItem23,
             this.toolStripMenuItem24});
             this.toolStripMenuItem14.Name = "toolStripMenuItem14";
             this.toolStripMenuItem14.Size = new System.Drawing.Size(97, 23);
@@ -273,23 +263,16 @@
             // toolStripMenuItem22
             // 
             this.toolStripMenuItem22.Name = "toolStripMenuItem22";
-            this.toolStripMenuItem22.Size = new System.Drawing.Size(89, 22);
+            this.toolStripMenuItem22.Size = new System.Drawing.Size(80, 22);
             this.toolStripMenuItem22.Text = "1";
-            this.toolStripMenuItem22.Click += new System.EventHandler(this.SetStop);
-            // 
-            // toolStripMenuItem23
-            // 
-            this.toolStripMenuItem23.Name = "toolStripMenuItem23";
-            this.toolStripMenuItem23.Size = new System.Drawing.Size(89, 22);
-            this.toolStripMenuItem23.Text = "1.5";
-            this.toolStripMenuItem23.Click += new System.EventHandler(this.SetStop);
+            this.toolStripMenuItem22.Click += new System.EventHandler(this.OnSetStopBits);
             // 
             // toolStripMenuItem24
             // 
             this.toolStripMenuItem24.Name = "toolStripMenuItem24";
-            this.toolStripMenuItem24.Size = new System.Drawing.Size(89, 22);
+            this.toolStripMenuItem24.Size = new System.Drawing.Size(80, 22);
             this.toolStripMenuItem24.Text = "2";
-            this.toolStripMenuItem24.Click += new System.EventHandler(this.SetStop);
+            this.toolStripMenuItem24.Click += new System.EventHandler(this.OnSetStopBits);
             // 
             // textBox1
             // 
@@ -299,7 +282,7 @@
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(607, 26);
+            this.textBox1.Size = new System.Drawing.Size(607, 139);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -311,7 +294,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "Запустить запись";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.OnStartRecord);
             // 
             // button2
             // 
@@ -321,7 +304,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "Папка для записи";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.OnChangePath);
             // 
             // textBox2
             // 
@@ -333,32 +316,33 @@
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(356, 29);
             this.textBox2.TabIndex = 4;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // button3
+            // StopRecord
             // 
-            this.button3.Location = new System.Drawing.Point(501, 30);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(118, 29);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Остановить запись";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.StopRecord.Location = new System.Drawing.Point(501, 30);
+            this.StopRecord.Name = "StopRecord";
+            this.StopRecord.Size = new System.Drawing.Size(118, 29);
+            this.StopRecord.TabIndex = 5;
+            this.StopRecord.Text = "Остановить запись";
+            this.StopRecord.UseVisualStyleBackColor = true;
+            this.StopRecord.Click += new System.EventHandler(this.OnStop);
             // 
-            // Form1
+            // Recorder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(631, 96);
-            this.Controls.Add(this.button3);
+            this.ClientSize = new System.Drawing.Size(631, 208);
+            this.Controls.Add(this.StopRecord);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.menuStrip1);
             this.HelpButton = true;
+            this.Location = new System.Drawing.Point(647, 247);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.MaximumSize = new System.Drawing.Size(647, 247);
+            this.Name = "Recorder";
             this.Text = "ComPortReader";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -392,15 +376,13 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem18;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem19;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem20;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem21;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem14;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem22;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem23;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem24;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button StopRecord;
     }
 }
 
