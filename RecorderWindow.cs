@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Specialized;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
@@ -10,28 +11,35 @@ using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 
+using System.Collections.Specialized;
+using System.Configuration;
+using ComPortReader.Properties;
+
 namespace ComPortReader
 {
 
 
-    public partial class Recorder : Form
+    public partial class RecorderWindow : Form
     {
         private delegate void SafeCallWrite(string text);
         private delegate void SafeCallClear();
-        ComPort comPort;
+        ComPortReader _comPortReader;
         AsyncWriter writer;
         int rate = 115200;
         int dataBit = 8;
-        string comName;
+        string comName = "";
         string path = Directory.GetCurrentDirectory();
         Parity par = Parity.Even;
         StopBits stopBits = StopBits.Two;
 
-        public Recorder()
+        public RecorderWindow()
         {
+          
             InitializeComponent();
             DeviceCheck.RegisterUsbDeviceNotification(this.Handle);
             UpdatePorts();
+            InitSettings();
+
         }
         private bool CheckVars()
         {
@@ -42,19 +50,44 @@ namespace ComPortReader
         }
         private void OnStartRecord()
         {
-            comPort?.Dispose();
+            MarkerKeyLog logger = new MarkerKeyLog();
+            _comPortReader?.Dispose();
             writer?.Dispose();
-            comPort = new ComPort(comName, rate, par, dataBit, stopBits);
-            comPort.InitPort();
+            _comPortReader = new ComPortReader(comName, rate, par, dataBit, stopBits);
+            _comPortReader.InitPort();
             writer = new AsyncWriter(path);
-            comPort.OnGetCallback(writer.WriteAsync);
-            comPort.OnGetCallback(OnShowText);
+            _comPortReader.OnGetCallback(writer.WriteAsync);
+            _comPortReader.OnGetCallback(OnShowText);
+            logger.SetAction(writer.ChangeMark);
+            SaveSettings();
 
 
 
 
+        }
 
+        public void InitSettings()
+        {
+            comName = Properties.Settings.Default.comName;
+            rate = Settings.Default.rate;
+            par = (Parity)Settings.Default.par;
+            dataBit = Settings.Default.dataBit;
+            stopBits = (StopBits) Settings.Default.stopBits;
+            path = Settings.Default.path;
+            
+        }
 
+        public void SaveSettings()
+        {
+            Settings.Default.comName = comName;
+            Settings.Default.rate = rate;
+            par = (Parity)Settings.Default.par;
+            Settings.Default.dataBit = dataBit;
+            stopBits = (StopBits) Settings.Default.stopBits;
+            Settings.Default.path = path;
+            Properties.Settings.Default.Save();  
+            Properties.Settings.Default.Upgrade();  
+            Properties.Settings.Default.Reload();  
         }
 
         public void ClearText()
@@ -79,11 +112,11 @@ namespace ComPortReader
             }
             else
             {
-                if (textBox1.Lines.Length > 10)
+                if (textBox1.Lines.Length > 20)
                 {
                     textBox1.Clear();
                 }
-                textBox1.Text += text;
+                textBox1.Text += text + Environment.NewLine;
             }
         }
 
@@ -176,7 +209,7 @@ namespace ComPortReader
         {
             OnShowText(Environment.NewLine + "Запись остановлена" + Environment.NewLine);
             ClearText();
-            comPort?.Dispose();
+            _comPortReader?.Dispose();
             writer?.Dispose();
         }
 
@@ -191,7 +224,7 @@ namespace ComPortReader
                 return;
 
             }
-            if (ComPort.IsBusy(comName))
+            if (ComPortReader.IsBusy(comName))
             {
                 textBox1.Text += string.Format("Порт " + comName + " занят" + Environment.NewLine);
                 return;

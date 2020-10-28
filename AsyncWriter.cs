@@ -13,6 +13,7 @@ namespace ComPortReader
         StreamWriter sr;
         string path = Directory.GetCurrentDirectory();
         string totalpath;
+        private bool isMarked = true;
         public void Dispose()
         {
             sr.Close();
@@ -30,12 +31,28 @@ namespace ComPortReader
             totalpath = path + @"\" + DateTime.Now.ToString("yyyyMMddhhmmss") + ".txt";
             sr = new StreamWriter(totalpath, false, Encoding.UTF8);
         }
-
-        public async  void WriteAsync(string text)
+           
+        public void ChangeMark()
         {
-            
-            sr.Write(text);
-            sr.Flush();
+            isMarked = true;
+        }
+
+
+        public async  void WriteAsync(string text) 
+        {
+            string infoMark = "";
+            text = text.Replace("\r\n", @"\r\n");
+            text =  text.Replace("\n", @"\n");
+            text =  text.Replace("\r", @"\r");
+            infoMark = ";" + DateTime.Now.ToString("yyyy:MM:dd:hh:mm:ss.fff") + ";";
+            if (isMarked)
+            {
+                infoMark += "*****";
+                isMarked = !isMarked;
+            }
+           
+           await sr.WriteLineAsync(text + infoMark);
+           await sr.FlushAsync();
         }
     }
 }

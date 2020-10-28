@@ -6,7 +6,7 @@ using System.Windows.Forms;
 using System.IO.Ports;
 namespace ComPortReader
 {
-    static class Program
+    static class Recorder
     {
        
         /// <summary>
@@ -17,7 +17,7 @@ namespace ComPortReader
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Recorder());
+            Application.Run(new RecorderWindow());
         }
 
     }

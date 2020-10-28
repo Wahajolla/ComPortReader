@@ -8,3 +8,13 @@ C:\Users\Wahajolla\source\repos\ComPortReader\bin\Debug\ComPortReader.pdb
 C:\Users\Wahajolla\source\repos\ComPortReader\obj\Debug\ComPortReader.exe
 C:\Users\Wahajolla\source\repos\ComPortReader\obj\Debug\ComPortReader.pdb
 C:\Users\Wahajolla\source\repos\ComPortReader\obj\Debug\ComPortReader.csprojAssemblyReference.cache
+F:\WorkWorkWork\Unity\ComPortReader\bin\Debug\ComPortReader.exe.config
+F:\WorkWorkWork\Unity\ComPortReader\bin\Debug\ComPortReader.exe
+F:\WorkWorkWork\Unity\ComPortReader\bin\Debug\ComPortReader.pdb
+F:\WorkWorkWork\Unity\ComPortReader\obj\Debug\ComPortReader.csprojAssemblyReference.cache
+F:\WorkWorkWork\Unity\ComPortReader\obj\Debug\ComPortReader.Properties.Resources.resources
+F:\WorkWorkWork\Unity\ComPortReader\obj\Debug\ComPortReader.csproj.GenerateResource.cache
+F:\WorkWorkWork\Unity\ComPortReader\obj\Debug\ComPortReader.csproj.CoreCompileInputs.cache
+F:\WorkWorkWork\Unity\ComPortReader\obj\Debug\ComPortReader.exe
+F:\WorkWorkWork\Unity\ComPortReader\obj\Debug\ComPortReader.pdb
+F:\WorkWorkWork\Unity\ComPortReader\obj\Debug\ComPortReader.RecorderWindow.resources

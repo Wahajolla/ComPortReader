@@ -7,23 +7,22 @@ using System.Threading.Tasks;
 
 namespace ComPortReader
 {
-    class ComPort : IDisposable
+    class ComPortReader : IDisposable
     {
         public CancellationTokenSource source = new CancellationTokenSource();
         public CancellationToken token;
-        public Action<string> OnGetRecord; 
+        public Action<string> OnGetRecord;  
         SerialPort port = new SerialPort();
-        public ComPort(string name, int rate = 115200, Parity par = Parity.Even, int dataBit = 8, StopBits stopBits = StopBits.Two)
+        public ComPortReader(string name, int rate = 115200, Parity par = Parity.Even, int dataBit = 8, StopBits stopBits = StopBits.Two)
         {
             port = new SerialPort(name, rate, par, dataBit, stopBits);
-           
         }
 
         public void InitPort()
         {
             token = source.Token;
             port.DtrEnable = true;
-            port.Encoding = Encoding.UTF8;
+            port.Encoding = Encoding.ASCII;
             port.DataReceived += OnRecordRecived;
             port.ReadBufferSize = 12000;
             port.Open();
@@ -54,8 +53,7 @@ namespace ComPortReader
                 {
                 try
                 {
-                    string s = port.ReadLine();
-                    OnGetRecord.Invoke(s);
+                    OnGetRecord.Invoke(port.ReadLine());
                 }
                 catch
                 {

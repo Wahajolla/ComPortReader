@@ -1,6 +1,6 @@
 ﻿namespace ComPortReader
 {
-    partial class Recorder
+    partial class RecorderWindow
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -342,7 +342,7 @@
             this.Location = new System.Drawing.Point(647, 247);
             this.MainMenuStrip = this.menuStrip1;
             this.MaximumSize = new System.Drawing.Size(647, 247);
-            this.Name = "Recorder";
+            this.Name = "RecorderWindow";
             this.Text = "ComPortReader";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

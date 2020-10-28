@@ -14,10 +14,6 @@ namespace ComPortReader
         private static readonly Guid GuidDevinterfaceUSBDevice = new Guid("A5DCBF10-6530-11D2-901F-00C04FB951ED"); // USB devices
         private static IntPtr notificationHandle;
 
-        /// <summary>
-        /// Registers a window to receive notifications when USB devices are plugged or unplugged.
-        /// </summary>
-        /// <param name="windowHandle">Handle to the window receiving notifications.</param>
         public static void RegisterUsbDeviceNotification(IntPtr windowHandle)
         {
             DevBroadcastDeviceinterface dbi = new DevBroadcastDeviceinterface
@@ -35,9 +31,6 @@ namespace ComPortReader
             notificationHandle = RegisterDeviceNotification(windowHandle, buffer, 0);
         }
 
-        /// <summary>
-        /// Unregisters the window for USB device notifications
-        /// </summary>
         public static void UnregisterUsbDeviceNotification()
         {
             UnregisterDeviceNotification(notificationHandle);

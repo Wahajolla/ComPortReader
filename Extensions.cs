@@ -9,13 +9,6 @@ namespace ComPortReader
 {
     public static class EnumExt
     {
-
-
-
-
-
-
-      
         public static string ToFriendlyString(this Parity me)
         {
             switch (me)
